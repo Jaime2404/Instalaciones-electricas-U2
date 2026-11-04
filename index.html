@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>UF1441 · Guía de estudio</title>
+<link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+<div class="top">
+  <div class="top-in">
+    <div class="brand">UF1441 · Electrificación de edificios
+      <small>Guía de estudio reescrita · ELEE0310</small>
+    </div>
+    <nav id="nav">
+      <button data-v="inicio" class="on">Inicio</button>
+      <button data-v="ud1">UD1</button>
+      <button data-v="ud2">UD2</button>
+      <button data-v="ud3">UD3</button>
+      <button data-v="cifras">Cifras</button>
+      <button data-v="repaso">Repaso</button>
+      <button data-v="plan">Plan</button>
+    </nav>
+  </div>
+</div>
+
+<main>
+
+<section class="view on" id="v-inicio">
+  <h1>Lo mismo que el manual, pero en corto y por partes</h1>
+  <p class="lead">El PDF original son párrafos largos, tablas apretadas y saltos bruscos. Aquí está reordenado en bloques que se leen en dos minutos cada uno, con lo importante señalado y los datos sueltos reunidos aparte.</p>
+
+  <div class="call c-cifra"><b>Cómo se usa esto</b>
+    <p>Cada unidad tiene sus apartados y, al final, un test de 30 preguntas con corrección y explicación. Las diez primeras de cada test son las de la autoevaluación del manual. El progreso se guarda solo en tu navegador.</p>
+  </div>
+
+  <div class="grid">
+    <div class="card"><h4>UD1 · Organización</h4><p>Documentación, trámites, partes de la instalación, conductores y protecciones.</p></div>
+    <div class="card"><h4>UD2 · Planificación</h4><p>Emplazamientos, Gantt y PERT, medios auxiliares, trabajos sin tensión.</p></div>
+    <div class="card"><h4>UD3 · Verificación</h4><p>Instrumentos, medidas, normativa y prevención de riesgos.</p></div>
+  </div>
+
+  <h2>Índice</h2>
+  <ul class="toc">
+    <li><a href="#ud1" data-go="ud1">Unidad 1 · Organización de proyectos de obra<span>Documentación</span></a></li>
+    <li><a href="#ud2" data-go="ud2">Unidad 2 · Planificación del montaje<span>Programación y seguridad</span></a></li>
+    <li><a href="#ud3" data-go="ud3">Unidad 3 · Medidas y verificaciones<span>Instrumentos y norma</span></a></li>
+    <li><a href="#cifras" data-go="cifras">Mazo de cifras<span>43 tarjetas</span></a></li>
+    <li><a href="#repaso" data-go="repaso">Repaso espaciado e interrogatorio<span>Recall</span></a></li>
+    <li><a href="#plan" data-go="plan">Plan de 7 días<span>Programa</span></a></li>
+  </ul>
+
+  <h2>Cómo se estudia esto de verdad</h2>
+  <div class="sec key"><span class="n">Método</span>
+    <ul>
+      <li><strong>No releas: pregúntate.</strong> Releer da sensación de dominio. Recuperar de memoria es lo que fija.</li>
+      <li><strong>Empieza por el test, no por el tema.</strong> Fallar duele y se recuerda.</li>
+      <li><strong>Usa el mazo de cifras todos los días.</strong> Es el 40 % de las respuestas correctas.</li>
+      <li><strong>Dibuja de memoria</strong> la cadena de la instalación en un folio.</li>
+      <li><strong>Explícalo en voz alta.</strong> Si no puedes explicar por qué protege un diferencial y no un magnetotérmico, todavía no lo sabes.</li>
+    </ul>
+  </div>
+
+  <div class="row" style="margin-top:2em">
+    <button class="btn" data-go="ud1">Empezar por la UD1</button>
+    <button class="btn ghost" data-go="plan">Ver el plan de 7 días</button>
+  </div>
+</section>
+
+<section class="view" id="v-ud1">
+  <span class="pill" id="p-ud1">Sin marcar</span>
+  <h1>UD1 · Organización de proyectos de obra</h1>
+  <p class="lead">Una instalación no empieza por el cable: empieza por el papel. Esta unidad es un catálogo de documentos, trámites y criterios de diseño.</p>
+
+  <div class="sec key"><span class="n">1.1</span>
+    <h2>La cadena de la instalación</h2>
+    <p>El recorrido de la energía es fijo y no se altera. Si en un test aparece la derivación individual antes de la línea general, está mal.</p>
+    <figure>
+      <svg viewBox="0 0 700 646" xmlns="http://www.w3.org/2000/svg">
+        <text x="30" y="26" font-size="15" font-weight="600" fill="currentColor">De la red a la vivienda, eslabón por eslabón</text>
+        <text x="30" y="45" font-size="11.5" fill="currentColor" opacity=".65">ITC-BT-11 a ITC-BT-17</text>
+        <rect x="30" y="66" width="250" height="32" rx="6" fill="none" stroke="#d97706" stroke-width="1.4"/><rect x="30" y="66" width="4" height="32" fill="#d97706"/>
+        <text x="44" y="87" font-size="13" fill="currentColor">1. Red de distribución pública</text>
+        <text x="300" y="80" font-size="11.5" fill="currentColor" opacity=".75">Propiedad de la compañía.</text>
+        <text x="300" y="94" font-size="11.5" fill="currentColor" opacity=".75">Fuera del alcance del instalador.</text>
+        <line x1="155" y1="98" x2="155" y2="116" stroke="currentColor" stroke-opacity=".4" class="arr"/>
+        <rect x="30" y="120" width="250" height="32" rx="6" fill="none" stroke="#d97706" stroke-width="1.4"/><rect x="30" y="120" width="4" height="32" fill="#d97706"/>
+        <text x="44" y="141" font-size="13" fill="currentColor">2. Acometida</text>
+        <text x="300" y="134" font-size="11.5" fill="currentColor" opacity=".75">Aérea o subterránea. La ejecuta la compañía</text>
+        <text x="300" y="148" font-size="11.5" fill="currentColor" opacity=".75">y termina en la CGP.</text>
+        <line x1="155" y1="152" x2="155" y2="170" stroke="currentColor" stroke-opacity=".4" class="arr"/>
+        <rect x="30" y="174" width="250" height="32" rx="6" fill="none" stroke="#2563eb" stroke-width="1.4"/><rect x="30" y="174" width="4" height="32" fill="#2563eb"/>
+        <text x="44" y="195" font-size="13" fill="currentColor">3. CGP · caja general de protección</text>
+        <text x="300" y="188" font-size="11.5" fill="currentColor" opacity=".75">Fusibles generales. En nicho, en el límite</text>
+        <text x="300" y="202" font-size="11.5" fill="currentColor" opacity=".75">público/privado. Máximo 2 por nicho.</text>
+        <line x1="155" y1="206" x2="155" y2="224" stroke="currentColor" stroke-opacity=".4" class="arr"/>
+        <rect x="30" y="228" width="250" height="32" rx="6" fill="none" stroke="#2563eb" stroke-width="1.4"/><rect x="30" y="228" width="4" height="32" fill="#2563eb"/>
+        <text x="44" y="249" font-size="13" fill="currentColor">4. LGA · línea general de alimentación</text>
+        <text x="300" y="242" font-size="11.5" fill="currentColor" opacity=".75">Corta y rectilínea, solo por zonas comunes.</text>
+        <text x="300" y="256" font-size="11.5" fill="currentColor" opacity=".75">Sección ampliable al 100 %.</text>
+        <line x1="155" y1="260" x2="155" y2="278" stroke="currentColor" stroke-opacity=".4" class="arr"/>
+        <rect x="30" y="282" width="250" height="32" rx="6" fill="none" stroke="#2563eb" stroke-width="1.4"/><rect x="30" y="282" width="4" height="32" fill="#2563eb"/>
+        <text x="44" y="303" font-size="13" fill="currentColor">5. Centralización de contadores</text>
+        <text x="300" y="296" font-size="11.5" fill="currentColor" opacity=".75">Local cerrado o armario. Hasta 16 en armario;</text>
+        <text x="300" y="310" font-size="11.5" fill="currentColor" opacity=".75">desde 17, local obligatorio.</text>
+        <line x1="155" y1="314" x2="155" y2="332" stroke="currentColor" stroke-opacity=".4" class="arr"/>
+        <rect x="30" y="336" width="250" height="32" rx="6" fill="none" stroke="#2563eb" stroke-width="1.4"/><rect x="30" y="336" width="4" height="32" fill="#2563eb"/>
+        <text x="44" y="357" font-size="13" fill="currentColor">6. Derivación individual</text>
+        <text x="300" y="350" font-size="11.5" fill="currentColor" opacity=".75">Una por vivienda. Tubo ≥32 mm, cable ≥6 mm²,</text>
+        <text x="300" y="364" font-size="11.5" fill="currentColor" opacity=".75">registro cada 15 m, cortafuegos cada 3 plantas.</text>
+        <line x1="155" y1="368" x2="155" y2="386" stroke="currentColor" stroke-opacity=".4" class="arr"/>
+        <rect x="30" y="390" width="250" height="32" rx="6" fill="none" stroke="#16a34a" stroke-width="1.4"/><rect x="30" y="390" width="4" height="32" fill="#16a34a"/>
+        <text x="44" y="411" font-size="13" fill="currentColor">7. CGMP + caja del ICP</text>
+        <text x="300" y="404" font-size="11.5" fill="currentColor" opacity=".75">Junto a la puerta, entre 1,4 y 2 m.</text>
+        <text x="300" y="418" font-size="11.5" fill="currentColor" opacity=".75">Nunca en baño ni dormitorio.</text>
+        <line x1="155" y1="422" x2="155" y2="440" stroke="currentColor" stroke-opacity=".4" class="arr"/>
+        <rect x="30" y="444" width="250" height="32" rx="6" fill="none" stroke="#16a34a" stroke-width="1.4"/><rect x="30" y="444" width="4" height="32" fill="#16a34a"/>
+        <text x="44" y="465" font-size="13" fill="currentColor">8. Circuitos interiores (C1 a C11)</text>
+        <text x="300" y="458" font-size="11.5" fill="currentColor" opacity=".75">Cada circuito, su magnetotérmico y su</text>
+        <text x="300" y="472" font-size="11.5" fill="currentColor" opacity=".75">conductor de protección.</text>
+        <rect x="30" y="494" width="3" height="11" fill="#d97706"/><text x="40" y="504" font-size="11" fill="currentColor" opacity=".8">Compañía</text>
+        <rect x="105" y="494" width="3" height="11" fill="#2563eb"/><text x="115" y="504" font-size="11" fill="currentColor" opacity=".8">Enlace (zonas comunes)</text>
+        <rect x="300" y="494" width="3" height="11" fill="#16a34a"/><text x="310" y="504" font-size="11" fill="currentColor" opacity=".8">Interior de la vivienda</text>
+      </svg>
+      <figcaption>Mapa base de la unidad. Repróducelo de memoria en un folio hasta que salga sin mirar.</figcaption>
+    </figure>
+    <figure class="foto" data-file="img/01-cgp.jpg">
+      <img src="img/01-cgp.jpg" alt="Nicho con caja general de protección en fachada" onerror="this.parentElement.classList.add('nofoto')">
+      <figcaption>CGP en nicho: va en el límite entre la vía pública y la finca.</figcaption>
+    </figure>
+
+    <h3>Dimensionado de la derivación individual</h3>
+    <p>La derivación individual va del contador a la vivienda. Es de un solo usuario y no puede alimentar a dos. Estos mínimos son de la ITC-BT-15.</p>
+    <table>
+      <thead><tr><th>Concepto</th><th>Valor mínimo o máximo</th></tr></thead>
+      <tbody>
+        <tr><td>Sección del cable</td><td><strong>6 mm²</strong> como mínimo</td></tr>
+        <tr><td>Diámetro del tubo</td><td><strong>32 mm</strong> como mínimo</td></tr>
+        <tr><td>Cajas de registro precintables</td><td>Cada <strong>15 m</strong> como máximo</td></tr>
+        <tr><td>Cortafuegos en el recorrido</td><td>Cada <strong>3 plantas</strong></td></tr>
+        <tr><td>Tubos de reserva</td><td><strong>1</strong> por cada 10 derivaciones</td></tr>
+        <tr><td>Caída de tensión</td><td><strong>3 %</strong> en alumbrado y <strong>5 %</strong> en otros usos</td></tr>
+      </tbody>
+    </table>
+    <div class="call c-cifra"><b>Cifra</b><p>6 mm² es la sección mínima, no la que se elige siempre. La sección real sale de la potencia y de la caída de tensión admitida.</p></div>
+    <p>En el nicho de la CGP caben como máximo <strong>dos cajas</strong>.</p>
+  </div>
+
+  <div class="sec key"><span class="n">1.2</span>
+    <h2>Protección de las personas: dos frentes</h2>
+    <table>
+      <thead><tr><th>Contacto</th><th>Qué es</th><th>Cómo se evita</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Directo</strong></td><td>Tocar una parte activa en tensión</td><td>Aislamiento, barreras, envolventes, alejamiento, MBTS</td></tr>
+        <tr><td><strong>Indirecto</strong></td><td>Tocar una masa puesta en tensión por un fallo</td><td>Puesta a tierra + diferencial, doble aislamiento, separación de circuitos</td></tr>
+      </tbody>
+    </table>
+    <p>El <strong>diferencial</strong> cubre los dos frentes: es protección complementaria frente a los directos y principal frente a los indirectos.</p>
+    <div class="call c-cifra"><b>Cifra</b><p>Diferencial máximo de <strong>30 mA</strong> para protección de personas.</p></div>
+    <div class="call c-trampa"><b>Trampa</b><p>El <strong>magnetotérmico</strong> no protege a las personas: corta por sobrecarga y cortocircuito.</p></div>
+  </div>
+
+  <div class="sec key"><span class="n">1.3</span>
+    <h2>Puesta a tierra</h2>
+    <p>Su función es mantener las masas a un potencial parecido al del suelo y dar salida a las corrientes de defecto, para que el diferencial pueda actuar.</p>
+    <p>La <strong>resistividad</strong> del terreno es la clave: cuanto más baja, mejor tierra. Pizarra y arcilla conducen; granito y roca no.</p>
+    <div class="call c-mnemo"><b>Mnemotecnia</b><p>Tierra buena = terreno <strong>blando y húmedo</strong>. Tierra mala = <strong>roca</strong>.</p></div>
+  </div>
+
+  <div class="sec warn"><span class="n">1.4</span>
+    <h2>Proyecto o Memoria Técnica de Diseño</h2>
+    <table>
+      <thead><tr><th>Instalación</th><th>Proyecto</th></tr></thead>
+      <tbody>
+        <tr><td>Pública concurrencia, quirófanos, riesgo de incendio o explosión, piscinas, locales mojados de gran superficie</td><td><strong>Siempre</strong>, sin límite de potencia</td></tr>
+        <tr><td>Vivienda unifamiliar</td><td>Desde <strong>50 kW</strong></td></tr>
+        <tr><td>Resto de locales</td><td>Desde <strong>20 kW</strong></td></tr>
+      </tbody>
+    </table>
+    <p>El proyecto lo redacta un <strong>técnico competente</strong>. La MTD la firma el <strong>instalador autorizado</strong>.</p>
+    <div class="call c-ojo"><b>Ojo</b><p>Pública concurrencia sin límite de potencia es la pregunta que más se falla.</p></div>
+  </div>
+
+  <div class="sec key"><span class="n">1.5</span>
+    <h2>Documentación de obra</h2>
+    <ul>
+      <li><strong>Proyecto:</strong> memoria, planos, pliego de condiciones y presupuesto.</li>
+      <li><strong>Estudio de seguridad y salud:</strong> lo redacta el técnico competente; obligatorio con proyecto.</li>
+      <li><strong>Plan de calidad:</strong> control de recepción, de ejecución y de la instalación terminada.</li>
+      <li><strong>Certificado de instalación (boletín):</strong> se presenta para legalizar ante la comunidad autónoma.</li>
+    </ul>
+    <p>El <strong>marcado CE lo pone el fabricante</strong>; el director técnico solo verifica que el producto lo lleva. Las instalaciones con proyecto pasan <strong>inspección inicial por un Organismo de Control Autorizado (OCA)</strong> antes de la puesta en servicio.</p>
+    <div class="call c-trampa"><b>Trampa</b><p><strong>Control de calidad</strong> comprueba que se cumple lo proyectado. <strong>Aseguramiento de la calidad</strong> es el sistema que garantiza que ese control existe y se documenta.</p></div>
+    <p>El control documental de los suministros exige <strong>documento de origen y hoja de suministro con etiquetado</strong>, <strong>certificado de garantía del fabricante</strong> y <strong>documentos de conformidad o autorizaciones administrativas</strong>.</p>
+    <p>El marcado CE indica que el producto cumple normas armonizadas o guías DITE, que se ha superado la evaluación de la conformidad y que el fabricante responde de su colocación. Las letras CE no bajan de <strong>5 mm</strong>.</p>
+    <p>Cuando el marcado CE no es exigible se acepta por otra vía: conformidad a norma, DIT, certificación reglamentaria, sello INCE-AENOR, ensayo de laboratorio acreditado o certificado del fabricante. El <strong>certificado CE de conformidad no sirve aquí</strong>.</p>
+  </div>
+
+  <div class="sec key"><span class="n">1.6</span>
+    <h2>Rendimientos y planificación previa</h2>
+    <p>Los rendimientos son <strong>horas de operario por unidad de obra</strong>, de las bases de precios autonómicas.</p>
+    <div class="call c-cifra"><b>Objetivos del planning</b><p>Tres y a la vez: <strong>calidad según la documentación técnica</strong>, <strong>plazo</strong> pactado y <strong>precio contratado</strong>.</p></div>
+  </div>
+
+  <div class="sec warn"><span class="n">1.7</span>
+    <h2>Conductores, colores y empalmes</h2>
+    <table>
+      <thead><tr><th>Conductor</th><th>Color normalizado</th></tr></thead>
+      <tbody>
+        <tr><td>Fase</td><td>Marrón, negro o gris</td></tr>
+        <tr><td>Neutro</td><td>Azul</td></tr>
+        <tr><td>Protección</td><td>Verde y amarillo (uso exclusivo)</td></tr>
+      </tbody>
+    </table>
+    <p>La tensión nominal de una vivienda es <strong>230 V entre fase y neutro</strong> y 400 V entre fases.</p>
+    <p>La sección del <strong>conductor de protección</strong> se deduce de la de fase.</p>
+    <table>
+      <thead><tr><th>Sección de fase</th><th>Sección de protección</th></tr></thead>
+      <tbody>
+        <tr><td>Hasta 16 mm²</td><td>La misma que la fase</td></tr>
+        <tr><td>De 16 a 35 mm²</td><td>16 mm²</td></tr>
+        <tr><td>Más de 35 mm²</td><td>La mitad de la sección de fase</td></tr>
+      </tbody>
+    </table>
+    <div class="call c-ojo"><b>Ojo</b><p>Los <strong>empalmes</strong> se hacen siempre en cajas de derivación accesibles. Dentro del tubo no se empalma nunca.</p></div>
+  </div>
+
+  <div class="sec warn"><span class="n">1.8</span>
+    <h2>Sobreintensidades y sobretensiones</h2>
+    <table>
+      <thead><tr><th>Fenómeno</th><th>Qué es</th><th>Qué lo protege</th></tr></thead>
+      <tbody>
+        <tr><td>Sobrecarga de uso</td><td>Más consumo del previsto durante tiempo prolongado</td><td>Magnetotérmico o fusible</td></tr>
+        <tr><td>Cortocircuito</td><td>Contacto directo entre fase y neutro o entre fases</td><td>Magnetotérmico o fusible, con poder de corte suficiente</td></tr>
+        <tr><td>Sobrecarga transitoria</td><td>Pico breve por maniobra o arranque</td><td>Curva adecuada del automático</td></tr>
+      </tbody>
+    </table>
+    <p>La <strong>sobretensión transitoria</strong> es un pico de tensión por rayo o maniobra. Se combate con un protector contra sobretensiones <strong>aguas arriba del IGA</strong>.</p>
+    <div class="call c-trampa"><b>Trampa</b><p>Sobrecarga y cortocircuito son sobreintensidades. La sobretensión no: es tensión, no corriente.</p></div>
+  </div>
+
+  <div class="sec key"><span class="n">1.9</span>
+    <h2>Alumbrado de seguridad</h2>
+    <table>
+      <thead><tr><th>Tipo</th><th>Iluminancia mínima</th><th>Duración</th><th>Dónde</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Evacuación</strong></td><td>1 lux en el suelo; <strong>5 lux</strong> junto a cuadros y equipos de extinción</td><td>1 hora</td><td>Recorridos de evacuación, cambios de dirección, salidas, escaleras</td></tr>
+        <tr><td><strong>Antipánico</strong></td><td>0,5 lux hasta 1 m de altura</td><td>1 hora</td><td>Locales con 100 personas o más; sótanos desde 50</td></tr>
+        <tr><td><strong>Zonas de alto riesgo</strong></td><td>15 lux <em>o</em> el 10 % del normal, el mayor</td><td>1 hora</td><td>Zonas peligrosas</td></tr>
+        <tr><td><strong>Reemplazamiento</strong></td><td>El mismo nivel que el normal</td><td>2 horas en hospitalización</td><td>Quirófanos, urgencias, paritorios</td></tr>
+      </tbody>
+    </table>
+    <p>La conmutación es <strong>automática</strong>, al fallar o al bajar la tensión al <strong>70 %</strong>. Luminarias a <strong>2,25 m</strong> de altura mínima y a no más de 15 m entre puntos.</p>
+    <div class="call c-ojo"><b>Ojo</b><p>En una <strong>vivienda unifamiliar</strong> no es obligatorio el alumbrado de evacuación.</p></div>
+  </div>
+
+  <div class="sec warn"><span class="n">1.10</span>
+    <h2>Atmósferas explosivas</h2>
+    <table>
+      <thead><tr><th>Clase</th><th>Sustancia</th><th>Zonas</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Clase I</strong></td><td>Gases, vapores o nieblas</td><td>Zona 0 permanente, zona 1 ocasional, zona 2 puntual</td></tr>
+        <tr><td><strong>Clase II</strong></td><td>Polvo inflamable</td><td>Zona 20 permanente, zona 21 ocasional, zona 22 puntual</td></tr>
+      </tbody>
+    </table>
+    <p>Categoría I para zonas 0 y 20, II para 1 y 21, III para 2 y 22. Base: RD 400/1996 y UNE-EN 60079-14.</p>
+    <div class="call c-trampa"><b>Trampa</b><p>Clase II es <strong>polvo</strong>, no gas. Un silo de trigo es Clase II, zona 21.</p></div>
+  </div>
+
+  <div class="sec"><span class="n">Test</span>
+    <h2>Autoevaluación de la UD1</h2>
+    <p>30 preguntas. Las diez primeras son las de la autoevaluación del manual.</p>
+    <div id="quiz-ud1"></div>
+  </div>
+
+  <div class="row" style="margin-top:2.5em">
+    <button class="btn" data-go="ud2">Siguiente: UD2</button>
+    <button class="btn ghost" id="mark-ud1">Marcar unidad como estudiada</button>
+  </div>
+</section>
+
+<section class="view" id="v-ud2">
+  <span class="pill" id="p-ud2">Sin marcar</span>
+  <h1>UD2 · Planificación del montaje en edificios de viviendas</h1>
+  <p class="lead">Cómo se coloca cada elemento, cómo se ordena el tiempo con herramientas de programación y cómo se trabaja sin accidentes.</p>
+
+  <div class="sec key"><span class="n">2.1</span>
+    <h2>Emplazamiento: cada cosa en su cota</h2>
+    <p>El emplazamiento de las instalaciones de enlace debe ser <strong>registrable, accesible y fácilmente reparable</strong>: tiene que poder localizarse, llegarse a él y sustituirse lo que falle sin obras de albañilería.</p>
+    <p>La <strong>línea general de alimentación no es de cada usuario</strong>. Una sola LGA puede alimentar toda una centralización de contadores, y de ahí salen las derivaciones individuales.</p>
+    <table>
+      <thead><tr><th>Elemento</th><th>Dónde</th></tr></thead>
+      <tbody>
+        <tr><td>CGP</td><td>Nicho en el límite público/privado, máximo 2 por nicho; puerta con IK 10 y parte inferior a 30 cm del suelo</td></tr>
+        <tr><td>LGA y DI</td><td>Solo por zonas comunes; nunca por el interior de una vivienda ajena</td></tr>
+        <tr><td>Contadores</td><td>1,10 m libres delante; lectura por debajo de 1,80 m; hasta 16 por armario y local obligatorio desde 17</td></tr>
+        <tr><td>Cuadro general</td><td>Junto a la puerta de entrada, entre 1,4 y 2 m; en locales comerciales, mínimo 1,0 m; nunca en baño, aseo ni dormitorio</td></tr>
+      </tbody>
+    </table>
+    <figure class="foto" data-file="img/02-cuadro.jpg">
+      <img src="img/02-cuadro.jpg" alt="Cuadro general de mando y protección de una vivienda" onerror="this.parentElement.classList.add('nofoto')">
+      <figcaption>Orden interno del cuadro: IGA, diferencial y magnetotérmicos de cada circuito.</figcaption>
+    </figure>
+    <div class="call c-cifra"><b>Cifras</b><p>DI: tubo <strong>≥32 mm</strong>, cable <strong>≥6 mm²</strong>, registro precintable cada <strong>15 m</strong>, cortafuegos cada <strong>3 plantas</strong>, 1 tubo de reserva por cada 10 derivaciones.</p></div>
+    <div class="call c-trampa"><b>Trampa</b><p>2,20 m está <strong>fuera</strong> del rango 1,4-2 m: es una altura incorrecta para un dispositivo de mando y protección.</p></div>
+  </div>
+
+  <div class="sec key"><span class="n">2.2</span>
+    <h2>Herramientas de programación</h2>
+    <p>Los factores que intervienen al planificar son la <strong>definición de actividades</strong>, su <strong>fecha de inicio y de finalización</strong> y la <strong>duración de cada tarea</strong>. El presupuesto, la firma del contrato o la situación del proyecto condicionan, pero no son factores de planificación.</p>
+    <div class="grid">
+      <div class="card"><h4>Cronograma</h4><p>Fija inicio, duración y fin de cada tarea. Es la base de todo lo demás.</p></div>
+      <div class="card"><h4>Gantt</h4><p>Barras horizontales, tiempo en el eje X. Muy visual, pero se vuelve ilegible al replanificar y no analiza alternativas ni costes.</p></div>
+      <div class="card"><h4>PERT / CPM</h4><p>Red de nodos y flechas. Es la única herramienta que define y calcula el camino crítico y las holguras.</p></div>
+      <div class="card"><h4>PDM y ADM</h4><p>Variantes de red. PDM pone la actividad en el nodo y admite cuatro tipos de precedencia; ADM usa la flecha como actividad.</p></div>
+    </div>
+    <div class="call c-ojo"><b>Ojo</b><p>El <strong>camino crítico solo existe en PERT</strong>. En el cronograma y en el Gantt no se calcula.</p></div>
+    <div class="call c-cifra"><b>Fórmula</b><p>Duración esperada en PERT: <strong>t = (a + 4m + b) / 6</strong>, con <em>a</em> optimista, <em>m</em> más probable y <em>b</em> pesimista.</p></div>
+    <figure>
+      <svg viewBox="0 0 700 260" xmlns="http://www.w3.org/2000/svg">
+        <text x="20" y="26" font-size="15" font-weight="600" fill="currentColor">Camino crítico: la cadena sin holgura</text>
+        <text x="20" y="45" font-size="11.5" fill="currentColor" opacity=".65">Retrasar cualquier actividad roja retrasa toda la obra</text>
+        <circle cx="90" cy="120" r="26" fill="none" stroke="#b91c1c" stroke-width="2"/><text x="90" y="125" font-size="13" text-anchor="middle" fill="currentColor">A</text>
+        <line x1="116" y1="120" x2="196" y2="120" stroke="#b91c1c" stroke-width="2" class="arr"/>
+        <circle cx="222" cy="120" r="26" fill="none" stroke="#b91c1c" stroke-width="2"/><text x="222" y="125" font-size="13" text-anchor="middle" fill="currentColor">B</text>
+        <line x1="248" y1="120" x2="328" y2="120" stroke="#b91c1c" stroke-width="2" class="arr"/>
+        <circle cx="354" cy="120" r="26" fill="none" stroke="#b91c1c" stroke-width="2"/><text x="354" y="125" font-size="13" text-anchor="middle" fill="currentColor">C</text>
+        <text x="354" y="170" font-size="11.5" text-anchor="middle" fill="currentColor" opacity=".75">holgura 0</text>
+        <line x1="116" y1="112" x2="180" y2="62" stroke="currentColor" stroke-opacity=".45" class="arr"/>
+        <circle cx="206" cy="58" r="24" fill="none" stroke="currentColor" stroke-opacity=".5" stroke-width="1.5"/><text x="206" y="63" font-size="12" text-anchor="middle" fill="currentColor">D</text>
+        <line x1="230" y1="58" x2="304" y2="58" stroke="currentColor" stroke-opacity=".45" class="arr"/>
+        <circle cx="330" cy="58" r="24" fill="none" stroke="currentColor" stroke-opacity=".5" stroke-width="1.5"/><text x="330" y="63" font-size="12" text-anchor="middle" fill="currentColor">E</text>
+        <line x1="354" y1="58" x2="420" y2="58" stroke="currentColor" stroke-opacity=".45" class="arr"/>
+        <line x1="354" y1="58" x2="420" y2="112" stroke="currentColor" stroke-opacity=".45" class="arr"/>
+        <text x="206" y="24" font-size="11.5" text-anchor="middle" fill="currentColor" opacity=".75">holgura 3 días</text>
+        <circle cx="446" cy="120" r="26" fill="none" stroke="#16a34a" stroke-width="2"/><text x="446" y="125" font-size="13" text-anchor="middle" fill="currentColor">Fin</text>
+        <text x="500" y="112" font-size="11.5" fill="currentColor" opacity=".8">Se asigna primero el</text>
+        <text x="500" y="128" font-size="11.5" fill="currentColor" opacity=".8">personal a A, B y C.</text>
+      </svg>
+      <figcaption>El camino crítico es la secuencia más larga. Todo lo demás tiene margen.</figcaption>
+    </figure>
+  </div>
+
+  <div class="sec key"><span class="n">2.3</span>
+    <h2>Recursos y holguras</h2>
+    <p>La <strong>holgura</strong> es el retraso que admite una actividad sin mover la fecha final. Las del camino crítico tienen holgura cero.</p>
+    <p>Los problemas de asignación de recursos vienen de la <strong>experiencia y el rendimiento</strong> de cada operario: dos personas no rinden igual ni cometen los mismos errores. Por eso se asignan primero las tareas críticas a quien está acreditado para ellas.</p>
+    <p>La <strong>sobreasignación</strong> se corrige <strong>nivelando</strong> (retrasar tareas no críticas dentro de su holgura) o <strong>equilibrando</strong> la plantilla.</p>
+  </div>
+
+  <div class="sec warn"><span class="n">2.4</span>
+    <h2>Medios auxiliares</h2>
+    <ul>
+      <li><strong>Borriquetas:</strong> hasta 3 m sin arriostrar, hasta 6 m arriostradas; separación entre apoyos no mayor de 3,50 m; plataforma de 60 cm de ancho mínimo.</li>
+      <li><strong>Estabilidad:</strong> alto/ancho menor de 5 en andamios fijos y menor de 4 en móviles. Ruedas frenadas y nunca se desplaza con gente encima.</li>
+      <li><strong>Escaleras:</strong> a 75°, nunca más de 5 m, una sola persona, 1 m por encima del punto de apoyo.</li>
+      <li><strong>Plataformas elevadoras:</strong> barandilla de 0,90 m (pretil de 1,10 m según UNE-EN 280), arnés anclado y estabilizadores desplegados.</li>
+      <li><strong>Herramienta eléctrica:</strong> doble aislamiento o toma de tierra, siempre con diferencial de 30 mA.</li>
+    </ul>
+  </div>
+
+  <div class="sec key"><span class="n">2.5</span>
+    <h2>Trabajar sin tensión: las cinco etapas</h2>
+    <p>Orden obligatorio y siempre completo. Al reponer, en sentido inverso.</p>
+    <ol>
+      <li><strong>Desconectar</strong> con corte visible.</li>
+      <li><strong>Asegurar</strong> contra la realimentación (bloqueo y candado).</li>
+      <li><strong>Verificar</strong> la ausencia de tensión.</li>
+      <li><strong>Poner a tierra y en cortocircuito.</strong></li>
+      <li><strong>Proteger y señalizar</strong> la zona.</li>
+    </ol>
+    <div class="call c-mnemo"><b>Mnemotecnia</b><p><strong>DAVP+S</strong>. Si te saltas una, el procedimiento es nulo.</p></div>
+  </div>
+
+  <div class="sec key"><span class="n">2.6</span>
+    <h2>Locales especiales y volúmenes</h2>
+    <p>Húmedos (IPX1), mojados (IPX4), polvorientos (IP5X), piscinas y baños por volúmenes 0 a 3.</p>
+    <figure>
+      <svg viewBox="0 0 700 330" xmlns="http://www.w3.org/2000/svg">
+        <text x="20" y="26" font-size="15" font-weight="600" fill="currentColor">Volúmenes en un cuarto de baño</text>
+        <text x="20" y="45" font-size="11.5" fill="currentColor" opacity=".65">Cuanto menor el número, más exigente el material</text>
+        <rect x="30" y="66" width="420" height="230" rx="6" fill="none" stroke="currentColor" stroke-opacity=".35" stroke-dasharray="5 4"/>
+        <text x="42" y="86" font-size="11.5" fill="currentColor" opacity=".8">Volumen 3 · IPX1</text>
+        <rect x="110" y="96" width="300" height="180" rx="6" fill="none" stroke="#d97706" stroke-width="1.6"/>
+        <text x="122" y="116" font-size="11.5" fill="#d97706">Volumen 2 · IPX4</text>
+        <rect x="190" y="130" width="190" height="120" rx="6" fill="none" stroke="#b45309" stroke-width="1.6"/>
+        <text x="202" y="150" font-size="11.5" fill="#b45309">Volumen 1 · IPX5</text>
+        <rect x="240" y="160" width="100" height="70" rx="4" fill="#2563eb" fill-opacity=".16" stroke="#2563eb" stroke-width="1.8"/>
+        <text x="252" y="182" font-size="11.5" fill="#2563eb">Volumen 0</text>
+        <text x="252" y="198" font-size="11.5" fill="#2563eb">IPX7</text>
+        <text x="290" y="248" font-size="11.5" text-anchor="middle" fill="currentColor" opacity=".7">bañera o plato de ducha</text>
+        <line x1="470" y1="120" x2="470" y2="230" stroke="currentColor" stroke-opacity=".3"/>
+        <text x="484" y="112" font-size="11.5" fill="currentColor" opacity=".85">Volumen 0: dentro de la bañera</text>
+        <text x="484" y="132" font-size="11.5" fill="currentColor" opacity=".85">Volumen 1: hasta 2,25 m de alto</text>
+        <text x="484" y="152" font-size="11.5" fill="currentColor" opacity=".85">Volumen 2: 60 cm alrededor</text>
+        <text x="484" y="172" font-size="11.5" fill="currentColor" opacity=".85">Volumen 3: resto del cuarto</text>
+        <text x="484" y="200" font-size="11.5" fill="currentColor" opacity=".85">Volumen 0 y 1: nada de tomas</text>
+        <text x="484" y="220" font-size="11.5" fill="currentColor" opacity=".85">Volumen 2: tomas con diferencial</text>
+      </svg>
+      <figcaption>En piscina la lógica es la misma, con IPX8 en zona 0.</figcaption>
+    </figure>
+  </div>
+
+  <div class="sec key"><span class="n">2.7</span>
+    <h2>Montaje, mantenimiento y disponibilidad</h2>
+    <p>Montar bien es la primera medida de mantenimiento. Una instalación ordenada, accesible y bien rotulada <strong>abarata el mantenimiento y el uso</strong>; una mal ejecutada los encarece durante toda su vida.</p>
+    <p>Tres propiedades guían el diseño:</p>
+    <table>
+      <thead><tr><th>Propiedad</th><th>Qué mide</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Mantenibilidad</strong></td><td>Facilidad de conservar la instalación en estado de servicio. Exige accesibilidad y documentación.</td></tr>
+        <tr><td><strong>Flexibilidad</strong></td><td>Facilidad de modificar y ampliar para adaptarse a nuevas necesidades. Exige reservas.</td></tr>
+        <tr><td><strong>Disponibilidad</strong></td><td>Proporción de tiempo en servicio: D = MTBF / (MTBF + MTTR)</td></tr>
+      </tbody>
+    </table>
+    <div class="call c-cifra"><b>Cifra</b><p>Un buen uso y mantenimiento de los dispositivos <strong>disminuye los costes directos e indirectos</strong>: menos averías, menos paradas y menos reparaciones.</p></div>
+  </div>
+
+  <div class="sec"><span class="n">Test</span>
+    <h2>Autoevaluación de la UD2</h2>
+    <p>30 preguntas. Las diez primeras son las de la autoevaluación del manual.</p>
+    <div id="quiz-ud2"></div>
+  </div>
+
+  <div class="row" style="margin-top:2.5em">
+    <button class="btn" data-go="ud3">Siguiente: UD3</button>
+    <button class="btn ghost" id="mark-ud2">Marcar unidad como estudiada</button>
+  </div>
+</section>
+
+<section class="view" id="v-ud3">
+  <span class="pill" id="p-ud3">Sin marcar</span>
+  <h1>UD3 · Medidas y verificaciones</h1>
+  <p class="lead">Demostrar con instrumentos y con norma que lo instalado es seguro.</p>
+
+  <div class="sec key"><span class="n">3.1</span>
+    <h2>Magnitudes, resistividad y electrodos</h2>
+    <table>
+      <thead><tr><th>Magnitud</th><th>Instrumento</th><th>Cómo se conecta</th></tr></thead>
+      <tbody>
+        <tr><td>Tensión</td><td>Voltímetro</td><td>En paralelo</td></tr>
+        <tr><td>Intensidad</td><td>Amperímetro o pinza</td><td>En serie (la pinza, abrazando el conductor)</td></tr>
+        <tr><td>Resistencia</td><td>Óhmetro</td><td>Sin tensión</td></tr>
+        <tr><td>Aislamiento</td><td>Megóhmetro</td><td>Sin tensión, a 500 V</td></tr>
+        <tr><td>Resistencia de tierra</td><td>Telurómetro</td><td>Tres picas, sin tensión</td></tr>
+      </tbody>
+    </table>
+    <p>La <strong>resistividad</strong> es la resistencia eléctrica específica de cada material a oponerse al paso de la corriente. No es la resistencia de un conductor concreto: es la del material, y por eso se mide en ohmios por metro.</p>
+    <p>La resistencia de un <strong>electrodo</strong> de puesta a tierra depende de dos cosas: de su <strong>forma</strong> y de la <strong>resistividad del terreno</strong> donde se clava. Cuanta más superficie de contacto y mejor terreno, menos ohmios.</p>
+    <div class="call c-ojo"><b>Ojo</b><p>Óhmetro y megóhmetro <strong>siempre sin tensión</strong>.</p></div>
+    <figure class="foto" data-file="img/03-multimetro.jpg">
+      <img src="img/03-multimetro.jpg" alt="Técnico midiendo tensión con multímetro y EPI" onerror="this.parentElement.classList.add('nofoto')">
+      <figcaption>Medida de tensión: puntas en paralelo, guantes aislantes y gafas.</figcaption>
+    </figure>
+    <div class="call c-cifra"><b>Fórmulas</b><p><strong>V = I · R</strong> &nbsp;&nbsp; <strong>P = V · I</strong></p></div>
+  </div>
+
+  <div class="sec key"><span class="n">3.2</span>
+    <h2>Instrumentos de aislamiento</h2>
+    <ul>
+      <li><strong>Megóhmetro:</strong> mide resistencia de aislamiento a 500 V, sin tensión.</li>
+      <li><strong>Medidor de corrientes de fuga:</strong> comprueba la <strong>eficiencia del aislamiento</strong> midiendo la fuga real, de forma no invasiva y con la instalación en servicio.</li>
+      <li><strong>Comprobador de diferenciales:</strong> verifica sensibilidad y tiempo de disparo.</li>
+    </ul>
+  </div>
+
+  <div class="sec key"><span class="n">3.3</span>
+    <h2>Verificaciones reglamentarias</h2>
+    <p>Antes de nada: <strong>inspección visual</strong>, comprobar que la instalación <strong>está sin tensión</strong> y descargar condensadores.</p>
+    <ul>
+      <li>Continuidad de los conductores de protección, sin tensión.</li>
+      <li>Resistencia de aislamiento, con megóhmetro a 500 V.</li>
+      <li>Resistencia de puesta a tierra: menos ohmios es mejor tierra.</li>
+      <li>Sensibilidad y tiempo de disparo de los diferenciales.</li>
+      <li>Polaridad.</li>
+    </ul>
+    <p>En un <strong>circuito monofásico</strong> el ensayo de aislamiento se realiza <strong>entre los conductores activos y el conductor de protección</strong>, y también entre los activos entre sí.</p>
+    <figure class="foto" data-file="img/04-telurómetro.jpg">
+      <img src="img/04-telurómetro.jpg" alt="Medición de puesta a tierra con telurómetro" onerror="this.parentElement.classList.add('nofoto')">
+      <figcaption>Resistencia de tierra con tres picas alineadas y separadas.</figcaption>
+    </figure>
+  </div>
+
+  <div class="sec key"><span class="n">3.4</span>
+    <h2>Continuidad: cómo se lee</h2>
+    <p>Al medir continuidad, un valor de resistencia <strong>casi cero</strong> significa que la corriente pasa sin obstáculo: la continuidad es <strong>muy buena</strong>. Un valor alto o infinito indica corte o mal contacto.</p>
+    <div class="call c-trampa"><b>Trampa</b><p>En continuidad, cero es bueno. En aislamiento, cero es malo. No se leen igual.</p></div>
+  </div>
+
+  <div class="sec warn"><span class="n">3.5</span>
+    <h2>Inspección, revisión y planes de seguridad</h2>
+    <p>La inspección ocular comprueba, entre otras cosas, que existen los <strong>esquemas de los circuitos de los cuadros</strong> y las <strong>placas de identificación</strong> de los cuadros y del instalador. Las dos cosas.</p>
+    <p>Una revisión resulta <strong>favorable cuando no se detecta ningún defecto muy grave ni grave</strong>. Los leves no la invalidan, se corrigen después.</p>
+    <p>La <strong>integración de la actividad preventiva</strong> significa que la prevención no es un departamento aparte: afecta a todos los componentes de la empresa y a cualquier acto de trabajo.</p>
+    <table>
+      <thead><tr><th>Plan de seguridad</th><th>Quién</th></tr></thead>
+      <tbody>
+        <tr><td>Lo aprueba</td><td>El <strong>Coordinador de Seguridad y Salud</strong></td></tr>
+        <tr><td>Con varios contratistas</td><td>Cada contratista elabora <strong>su propio plan</strong></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="sec warn"><span class="n">3.6</span>
+    <h2>Normativa aplicable</h2>
+    <ul>
+      <li><strong>REBT</strong> y sus instrucciones técnicas complementarias.</li>
+      <li>Normas <strong>UNE</strong> y <strong>CENELEC</strong>.</li>
+      <li>Normativa autonómica y ordenanzas municipales.</li>
+      <li>Normativa ambiental.</li>
+      <li><strong>Ley de Prevención de Riesgos Laborales</strong> y <strong>RD 614/2001</strong>.</li>
+    </ul>
+  </div>
+
+  <div class="sec key"><span class="n">3.7</span>
+    <h2>Prevención: EPI y EPG</h2>
+    <p><strong>EPI</strong>: guantes aislantes, pantalla facial, casco con barbuquejo, ropa ignífuga, arnés. <strong>EPG</strong>: puestas a tierra y en cortocircuito, pantallas aislantes, señalización, barreras.</p>
+    <div class="call c-trampa"><b>Trampa</b><p>La <strong>puesta a tierra y en cortocircuito</strong> es EPG, no EPI.</p></div>
+    <div class="call c-mnemo"><b>Mnemotecnia</b><p>EPI = <strong>I</strong>ndividual. EPG = <strong>G</strong>rupal.</p></div>
+  </div>
+
+  <div class="sec"><span class="n">Test</span>
+    <h2>Autoevaluación de la UD3</h2>
+    <p>30 preguntas. Las diez primeras son las de la autoevaluación del manual.</p>
+    <div id="quiz-ud3"></div>
+  </div>
+
+  <div class="row" style="margin-top:2.5em">
+    <button class="btn" data-go="cifras">Ir al mazo de cifras</button>
+    <button class="btn ghost" id="mark-ud3">Marcar unidad como estudiada</button>
+  </div>
+</section>
+
+<section class="view" id="v-cifras">
+  <h1>Mazo de cifras</h1>
+  <p class="lead">Todo lo que en este temario es un número, en tarjetas. Pulsa para ver la respuesta y valórate sin trampas.</p>
+  <div class="meta" id="cifras-meta"></div>
+  <div id="cifras-box"></div>
+  <div class="row" style="margin-top:1.4em">
+    <button class="btn ghost sm" id="cifras-reset">Reiniciar el mazo</button>
+    <button class="btn ghost sm" data-go="repaso">Ver programación</button>
+  </div>
+</section>
+
+<section class="view" id="v-repaso">
+  <h1>Repaso espaciado e interrogatorio</h1>
+  <p class="lead">Cinco cajas: lo que aciertas sube y tarda más en volver; lo que fallas cae a la caja 1 y vuelve en la misma sesión.</p>
+
+  <div class="grid">
+    <div class="card"><h4>Pendientes hoy</h4><p><strong id="due-n">0</strong> tarjetas del mazo toca repasar.</p></div>
+    <div class="card"><h4>Dominadas</h4><p><strong id="master-n">0</strong> tarjetas en caja 4 o 5.</p></div>
+    <div class="card"><h4>Interrogatorio</h4><p>Preguntas de test al azar de las tres unidades.</p></div>
+  </div>
+
+  <div class="row" style="margin:1.6em 0">
+    <button class="btn" id="repaso-start">Repasar lo pendiente</button>
+    <button class="btn ghost" id="interro-start">Interrogatorio aleatorio</button>
+  </div>
+
+  <div id="repaso-box"></div>
+
+  <h2>Cómo funciona la programación</h2>
+  <table>
+    <thead><tr><th>Caja</th><th>Si aciertas</th><th>Si fallas</th><th>Vuelve en</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>Sube a 2</td><td>Se queda en 1</td><td>Misma sesión</td></tr>
+      <tr><td>2</td><td>Sube a 3</td><td>Baja a 1</td><td>1 día</td></tr>
+      <tr><td>3</td><td>Sube a 4</td><td>Baja a 1</td><td>3 días</td></tr>
+      <tr><td>4</td><td>Sube a 5</td><td>Baja a 1</td><td>7 días</td></tr>
+      <tr><td>5</td><td>Se queda en 5</td><td>Baja a 1</td><td>21 días</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section class="view" id="v-plan">
+  <h1>Plan de 7 días</h1>
+  <p class="lead">Siete días, tres bloques de 25 minutos al día y un repaso corto antes de dormir.</p>
+
+  <div class="call c-cifra"><b>Regla de la semana</b><p>Nunca dos días seguidos sin abrir el mazo. Aunque solo sean cinco minutos.</p></div>
+
+  <ul class="plan" id="plan"></ul>
+
+  <h2>Al terminar</h2>
+  <ul>
+    <li>Repite los tres tests en seco hasta pasar de 26/30 en cada uno.</li>
+    <li>Reproduce la cadena de la instalación y las cinco etapas sin mirar.</li>
+    <li>Deja el mazo en cero pendientes antes de presentarte.</li>
+  </ul>
+
+  <div class="call c-ojo"><b>Lo que no funciona</b><p>Subrayar con cinco colores, leer en voz baja dos veces y empezar por el glosario.</p></div>
+</section>
+
+<div class="foot">
+  Guía de estudio de la UF1441 · Certificado ELEE0310 · Contenido reorganizado a partir del manual del curso. El progreso se guarda solo en este navegador.
+</div>
+
+</main>
+
+<script src="js/datos.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
