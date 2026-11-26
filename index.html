@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Instalaciones Eléctricas en Edificios | Resúmenes y Evaluación</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cloudflare.com" defer></script>
+  <script src="data.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <span class="brand-badge">MF0820_2</span>
+        <div>
+          <h1>Instalaciones Eléctricas en Edificios</h1>
+          <p class="subtitle">Guía de estudio interactiva, resúmenes por unidad y autoevaluación REBT</p>
+        </div>
+      </div>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú de navegación" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="main-nav" id="mainNav" aria-label="Navegación principal">
+        <ul class="nav-list">
+          <!-- Pestaña desplegable 1: UF1441 -->
+          <li class="nav-item dropdown">
+            <button class="nav-btn dropdown-toggle" data-uf="UF1441" aria-expanded="false">
+              UF1441 · Planificación <span class="arrow">▾</span>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a href="#uf1441-ud1" data-doc="UF1441" data-unit="UD1">UD1. Organización de proyectos y montaje</a></li>
+              <li><a href="#uf1441-ud2" data-doc="UF1441" data-unit="UD2">UD2. Planificación del montaje en edificios</a></li>
+              <li><a href="#uf1441-ud3" data-doc="UF1441" data-unit="UD3">UD3. Medidas, verificaciones y seguridad</a></li>
+            </ul>
+          </li>
+
+          <!-- Pestaña desplegable 2: UF1442 -->
+          <li class="nav-item dropdown">
+            <button class="nav-btn dropdown-toggle" data-uf="UF1442" aria-expanded="false">
+              UF1442 · Montaje <span class="arrow">▾</span>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a href="#uf1442-ud1" data-doc="UF1442" data-unit="UD1">UD1. Representación y simbología eléctrica</a></li>
+              <li><a href="#uf1442-ud2" data-doc="UF1442" data-unit="UD2">UD2. Montaje en edificios de viviendas</a></li>
+              <li><a href="#uf1442-ud3" data-doc="UF1442" data-unit="UD3">UD3. Montaje en locales, comercios e industria</a></li>
+            </ul>
+          </li>
+
+          <!-- Pestaña desplegable 3: UF1443 -->
+          <li class="nav-item dropdown">
+            <button class="nav-btn dropdown-toggle" data-uf="UF1443" aria-expanded="false">
+              UF1443 · Supervisión <span class="arrow">▾</span>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a href="#uf1443-ud1" data-doc="UF1443" data-unit="UD1">UD1. Planificación del montaje de instalaciones tipo</a></li>
+              <li><a href="#uf1443-ud2" data-doc="UF1443" data-unit="UD2">UD2. Supervisión del montaje en viviendas</a></li>
+              <li><a href="#uf1443-ud3" data-doc="UF1443" data-unit="UD3">UD3. Prevención de riesgos en el montaje</a></li>
+            </ul>
+          </li>
+
+          <!-- Pestaña 4: Evaluación -->
+          <li class="nav-item">
+            <button class="nav-btn eval-tab-btn" id="openEvalBtn" data-tab="evaluacion">
+              Evaluación Final
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container main-content">
+    <section id="summaryView" class="view-section active">
+      <div class="breadcrumb" id="breadcrumb">UF1441 &rsaquo; UD1</div>
+      <article class="summary-card" id="summaryContainer"></article>
+    </section>
+
+    <section id="evalView" class="view-section" hidden>
+      <div class="eval-header-card">
+        <div>
+          <h2>Autoevaluación Global del Módulo</h2>
+          <p>Selecciona la respuesta correcta en cada cuestión. Se corregirá al instante y podrás descargar tu informe en PDF.</p>
+        </div>
+        <div class="student-box">
+          <label for="studentName">Nombre del alumno/a (para el PDF):</label>
+          <input type="text" id="studentName" placeholder="Ej. Laura García Pérez" />
+        </div>
+      </div>
+
+      <div class="scoreboard-bar" id="scoreboardBar">
+        <div class="score-stats">
+          <span class="stat-pill neutral">Respondidas: <strong id="statAnswered">0</strong> / <strong id="statTotal">0</strong></span>
+          <span class="stat-pill success">Correctas: <strong id="statCorrect">0</strong></span>
+          <span class="stat-pill danger">Incorrectas: <strong id="statWrong">0</strong></span>
+          <span class="stat-pill grade">Nota actual: <strong id="statGrade">0.00</strong> / 10</span>
+        </div>
+
+        <div class="eval-actions">
+          <select id="filterUf" aria-label="Filtrar preguntas por Unidad Formativa">
+            <option value="ALL">Todas las UF (90 preguntas)</option>
+            <option value="UF1441">Solo UF1441 (30 preguntas)</option>
+            <option value="UF1442">Solo UF1442 (30 preguntas)</option>
+            <option value="UF1443">Solo UF1443 (30 preguntas)</option>
+          </select>
+          <button type="button" class="btn btn-secondary" id="resetQuizBtn">Reiniciar test</button>
+          <button type="button" class="btn btn-primary" id="downloadPdfBtn">Descargar Informe PDF</button>
+        </div>
+      </div>
+
+      <div id="questionsContainer" class="questions-list"></div>
+
+      <div class="final-summary-card" id="finalSummaryCard">
+        <h3>Resultado Final y Plan de Refuerzo</h3>
+        <div id="finalSummaryContent">
+          <p class="muted">Responde las preguntas para visualizar tu calificación detallada y las unidades recomendadas para repasar.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Recurso formativo · Instalaciones Eléctricas en el Entorno de Edificios (REBT)</p>
+    </div>
+  </footer>
+</body>
+</html>
